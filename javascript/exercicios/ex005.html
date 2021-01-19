@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estdos sobre o DOM</title>
+</head>
+<body>
+    <h1>Aprendendo a manipular o <strong>DOM</strong></h1>
+    <hr>
+    <p>Aqui está um parágrafo do site</p>
+    <p>Já esse é outro <em>parágrafo</em> do site</p>
+    <div class="tipo">
+        <p>Agora um parágrafo dentro de uma &lt;div&gt;</p>
+    </div>
+    <div>texto</div>
+    <hr>
+    <script>
+        var paragrafo = window.document.getElementsByTagName('p')[1]
+        window.document.write(paragrafo.innerHTML)
+        paragrafo.style.color = 'brown'
+        
+        var divs = window.document.querySelectorAll('div')
+        window.document.write(`</br> ${divs[0].innerHTML}`)
+    </script>
+</body>
+</html>
