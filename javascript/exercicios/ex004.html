@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(19, 18, 18);
+            text-align: justify;
+            color: white;
+        }
+        h1, h2 {
+            color: rgb(136, 24, 24);
+        }
+        p {
+            color: whitesmoke;
+            font-size: 18pt;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scripts sobre Strings</h1>
+    <script>
+        var nome = window.prompt("Digite o seu nome:");
+        document.write(`Olá ${nome}, seu nome possui ${nome.length} letras</br>`);
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}</br>`);
+        document.write(`Seu nome em maiúsculo é ${nome.toLowerCase()}</br>`);
+    </script>
+    <h2>Formatação especial para moeda</h2>
+    <script>
+        var money = Number(window.prompt(`Digite um valor monetário e veja a sua formatação em BRL:`));
+        document.write(`${money.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`);
+    </script>
+</body>
+</html>
