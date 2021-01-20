@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Somando Números</title>
     <style>
-        
+       body {
+           background-color: steelblue;
+       }
+       input {
+           margin-top: 20px;
+       }
+       div {
+           margin-top: 20px;
+           color: whitesmoke;
+       }
     </style>
 </head>
 <body>
-    
-    
+    <h1>Somando Números</h1>
+    <hr>
+    <input type="number" name="txtnumber1" id="txtnumber1"> +
+    <input type="number" name="txtnumber2" id="txtnumber2">
+    <input type="button" value="Somar" onclick="clicar()">
+    <div id="result">Resultado: </div>
+
+    <script>
+        function clicar(){
+            var content1 = window.document.getElementById("txtnumber1")
+            var content2 = window.document.querySelector("input#txtnumber2")
+            var result = window.document.getElementById("result")
+            var numero1 = Number(content1.value)
+            var numero2 = Number(content2.value)
+            result.innerHTML = `A soma entre ${numero1} e ${numero2} resulta em <strong>${numero1+numero2}</strong>`
+        }
+    </script>    
 </body>
 </html>
